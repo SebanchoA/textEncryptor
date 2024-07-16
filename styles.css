@@ -1,0 +1,27 @@
+/* :root{
+
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background: #F3F5FC;
+    display: flex;
+    flex-direction: row;
+    font-family: inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header{
+    padding: 40px 0 0 40px;
+    gap: 40px;
+}
+
+
+main{
+    display: flex;
+    flex-direction: row;
+}
