@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Enctripador de Texto</title>
 </head>
 <body>
     <header>
@@ -15,21 +15,24 @@
     </header>
     <main>
         <section class="main__container">
-            <h1 class="ingresar__texto">Ingrese el texto aqui</h1>
-            <p class="advertencia__texto">solo letras minusculas y sin acentos</p>
-            <div>
-                <button class="boton__encriptar"> Encriptar</button>
-                <button class="boton__desencriptar"> desencriptar</button>
+            <input type="text" class="ingresar__texto" placeholder="Ingrese el texto aqui">
+            <div class="bottom__container">
+                <p class="advertencia__texto"> <img src="./images/signo-de-admiracion.png" alt="signo__admiracion" class="signo__admiracion">solo letras minusculas y sin acentos</p>
+                <div class="botones">
+                    <a class="boton__encriptar"> Encriptar</a>
+                    <a class="boton__desencriptar"> Desencriptar</a>
+                </div>
             </div>
         </section>
         <section class="right__container">
             <img src="./images/Muñeco-alura.png" alt="ilustracion-persona-con-lupa">
-            <h1>Ningún mensaje fue encontrado</h1>
-            <p>ingresa el texto que desees encriptar o desencriptar</p>
+            <h1 class="right__container__title">Ningún mensaje fue encontrado</h1>
+            <p class="right__container__text">ingresa el texto que desees encriptar o desencriptar</p>
         </section>
     </main>
     <footer>
 
     </footer>
+    <script src="encriptador.js"></script>
 </body>
 </html>
