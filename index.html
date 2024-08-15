@@ -10,29 +10,39 @@
     <title>Enctripador de Texto</title>
 </head>
 <body>
+    <div class="body">
     <header>
-        <img src="./images/Logo-alura.png" alt="logo-alura">
+        <img  class="logo__alura" src="./images/Logo-alura.png" alt="logo-alura">
     </header>
     <main>
         <section class="main__container">
-            <input type="text" class="ingresar__texto" placeholder="Ingrese el texto aqui">
+            <textarea class="ingresar__texto" cols="30" rows="20" placeholder="Ingrese el texto aqui" ></textarea>
             <div class="bottom__container">
                 <p class="advertencia__texto"> <img src="./images/signo-de-admiracion.png" alt="signo__admiracion" class="signo__admiracion">solo letras minusculas y sin acentos</p>
                 <div class="botones">
-                    <a class="boton__encriptar"> Encriptar</a>
-                    <a class="boton__desencriptar"> Desencriptar</a>
+                    <button class="boton__encriptar"> Encriptar</button>
+                    <button class="boton__desencriptar"> Desencriptar</button>
                 </div>
             </div>
         </section>
-        <section class="right__container">
-            <img src="./images/Muñeco-alura.png" alt="ilustracion-persona-con-lupa">
-            <h1 class="right__container__title">Ningún mensaje fue encontrado</h1>
-            <p class="right__container__text">ingresa el texto que desees encriptar o desencriptar</p>
+        <section class="second__container">
+            <div class="right__container">
+            <textarea id="resultado" class="resultado ocultar-figura" cols="30" rows="20" readonly></textarea>
+            <!-- <img src="./images/Muñeco-alura.png" alt="ilustracion-persona-con-lupa"> -->
+            <div class="right__container__title bold" >Ningún mensaje fue encontrado</div>
+            <div class="right__container__text">ingresa el texto que desees encriptar o desencriptar</div>
+            <!-- <div>
+                <button id="boton__copiar" class="boton__copiar">Copiar</button>
+            </div> -->
+            </div>
         </section>
     </main>
     <footer>
-
+        <div class="footer">
+            <h1>HECHO POR SEBANCHO</h1>
+        </div>
     </footer>
+</div>
     <script src="encriptador.js"></script>
 </body>
 </html>

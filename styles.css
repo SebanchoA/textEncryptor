@@ -1,55 +1,73 @@
-/* :root{
-
-} */
+:root{
+font-size: 62.5%;
+}
 
 *{
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
+    
 }
 
 body{
     background: #F3F5FC;
-    display: flex;
     font-family: inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 }
 
+.body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
 header{
-    padding: 40px 0 0 40px;
-    gap: 40px;
+    display: flex;
+    padding: 20px;
 }
 
+.logo__alura{
+    height: 48px;
+}
 
 main{
     display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.main__container{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: space-around;/* height: 100%; */
 }
 
 .ingresar__texto{
-    width: 577px;
-    height: 48px;
-    margin-top: 168px;
-    margin-left: 240px;
-    gap: 0px;
-    opacity: 0px;
+    max-width: 100%; 
+    max-height: 75%;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 3.2rem;
     color: #0A3871;
-    resize: none;
     background-color:transparent;
+    text-transform: lowercase;
+    outline: none;
+}
+
+::placeholder {
+    color: #0A3871;
 }
 
 input::placeholder{
     font-weight: 400;
-    font-size: 32px;
+    font-size: 3.2rem;
     color: #0A3871;
 }
 .bottom__container{
     display: flex;
     flex-direction: column;
-    padding-top: 635px;
-    padding-left: 240px;
     gap: 16px;
 }
 .advertencia__texto{
@@ -58,6 +76,7 @@ input::placeholder{
     opacity: 80%;
     font-family: 'Inter';
     font-weight: 400;
+    align-items: center;
 }
 
 .signo__admiracion{
@@ -71,7 +90,6 @@ height: 24px;
     height: Hug (67px)px;
     gap: 24px;
     opacity: 0px;
-    padding-bottom:72px ;
 }
 
 .boton__encriptar{
@@ -85,6 +103,11 @@ height: 24px;
     justify-content: center;
     color: white;
 }
+:hover.boton__encriptar{
+    background-color:#032a58;
+    cursor: pointer;
+}
+
 
 .boton__desencriptar{
     display: flex;
@@ -96,16 +119,20 @@ height: 24px;
     color: #0A3871;
     align-items: center;
     justify-content: center;
-    border: 1px solid #0A3871
+    border: 1px solid #0A3871;
+    
 }
 
+:hover.boton__desencriptar{
+    background-color:#e2e7ee;
+    cursor: pointer;
+}
+.second__container{
+    display: flex;
+}
 .right__container{
     display: flex;
     flex-direction: column;
-    width: 400px;
-    height: 944px;
-    margin: 40px 40px 40px 80px;
-    padding: 32px;
     gap: 16px;
     border-radius: 32px;
     opacity: 0px;
@@ -113,12 +140,86 @@ height: 24px;
     box-shadow: 0px 24px 32px -8px #00000014;
     justify-content: center;
     align-items: center;
+    min-width: 400px;
+}
+
+.boton__copiar{
+    display: flex;
+    width: 328px;
+    padding: 24px;
+    opacity: 0px;
+    border-radius: 24px;
+    background: #D8DFE8;
+    color: #0A3871;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0A3871;
 }
 .right__container__title{
     width: 238px;
     text-align: center;
+    font-size: 2.4rem;
+    color: #343A40;
 }
 .right__container__text{
     width: 300px;
     text-align: center;
+    font-size: 1.6rem;
+    color: #495057;
+     
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 50px;
+}
+@media only screen and (max-width: 768px) {
+html,body{
+    overflow: auto;
+}
+main{
+    flex-direction: column;
+    align-content:space-between;
+}
+   
+    .main__container {
+        flex: 1 1 100%; /* Los contenedores ocupan el 100% del ancho */
+        margin: 10px 0; /* Ajusta el margen */
+        align-items: center;
+        justify-content: space-between;
+    }
+    .ingresar__texto {
+        height: 180px; /* Ajusta la altura del textarea */
+        font-size: 2.6rem;
+    }
+
+    .bottom__container{
+        padding-left: 8px;
+    }
+    .botones {
+        gap: 10px; /* Ajusta el espacio entre botones */
+    }
+
+    .boton__encriptar,.boton__desencriptar, .boton__copiar{
+        width: 200px;
+    }
+    .second__container{
+        justify-content: center;
+    }
+    .right__container__text{
+       width: 80%;
+    }
+
+    /* footer{
+        
+    } */
+}
+    @media only screen and (max-width: 425px) {
+     .botones{
+        flex-direction: column;
+     }
+
 }
