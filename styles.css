@@ -143,8 +143,11 @@ height: 24px;
     min-width: 400px;
 }
 
+.resultado{
+    display:none;
+}
 .boton__copiar{
-    display: flex;
+    display: none;
     width: 328px;
     padding: 24px;
     opacity: 0px;
