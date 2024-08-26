@@ -176,8 +176,11 @@ height: 24px;
 footer{
     display: flex;
     justify-content: center;
-    align-content: center;
+   
     height: 50px;
+}
+.foter{
+    align-content: center;
 }
 @media only screen and (max-width: 768px) {
 html,body{

@@ -72,19 +72,27 @@ function desencriptar(mensaje) {
   }
   return mensajeDesencriptado;
 }
-// function verificar() {
-//   let caracEspeciales = new RegExp("!, ?, ., ,, :, ;, +, -, *, /, =, %, $, €, £, ¥, @, #, &, *, ~, ^, á, é, í, ó, ú, ñ, ü")
-//   for (let i = 0; i < caracEspeciales.length; i++) {
-//       let unidades = caracEspeciales[i];
-//     if (unidades = cuadroTexto) {
-//       alert("No caracteres especiales");
-//     }
-//   }
-// }
+function verificar() {
+    let texto = cuadroTexto.value;
+    let validador = texto.match(/^[a-zA-Z\s]*$/);
+
+    if (!validador) {
+      alert("Solo son permitidas letras minúsculas y sin acentos");
+      location.reload();
+      return false;
+    }
+    return true;
+}
+
+
 botonEncriptar.addEventListener("click", function () {
-  ocultarElementosGraficos();
-  // verificar();
-  encriptarMensaje();
+    verificar()
+
+    ocultarElementosGraficos();
+    encriptarMensaje();
+  
+
+
 });
 
 botonDesencriptar.addEventListener("click", function () {
